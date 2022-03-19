@@ -1,0 +1,38 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Parameters:
+
+ 
+  newQAPFSxuProduceCapacity:
+    Description: "FSx uProduce Storage Capacity"
+    Type: Number
+    Default: 50
+
+Resources:
+  FSxuProduce:
+    Type: AWS::FSx::FileSystem
+    Properties:
+      FileSystemType: WINDOWS
+      StorageCapacity: !Ref newQAPFSxuProduceCapacity
+      StorageType: SSD
+      SubnetIds:
+        - subnet-***************
+      SecurityGroupIds:
+        - sg-***************
+      Tags:
+        - Key: Name
+          Value: newQAP-FSx-uProduce-AZ-A
+      WindowsConfiguration:
+        ActiveDirectoryId: d-*******
+        ThroughputCapacity: 8
+        WeeklyMaintenanceStartTime: '6:22:00'
+        DailyAutomaticBackupStartTime: '01:00'
+        AutomaticBackupRetentionDays: 2
+        DeploymentType: SINGLE_AZ_1
+        PreferredSubnetId: subnet-***************
+        CopyTagsToBackups: false
+
+
+Outputs:
+  FileSystemId:
+    Value: !Ref FSxuProduce
