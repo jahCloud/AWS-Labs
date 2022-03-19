@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.2",
+  "description": "Join instances to an AWS Directory Service domain.",
+  "runtimeConfig": {
+    "aws:domainJoin": {
+      "properties": {
+        "dnsIpAddresses": "{{ dnsIpAddresses }}",
+        "directoryId": "{{ directoryId }}",
+        "directoryName": "{{ directoryName }}"
+      }
+    }
+  },
+  "parameters": {
+    "dnsIpAddresses": {
+      "default": [],
+      "description": "(Optional) The IP addresses of the DNS servers in the directory. Required when DHCP is not configured. Learn more at http://docs.aws.amazon.com/directoryservice/latest/simple-ad/join_get_dns_addresses.html",
+      "type": "StringList",
+      "allowedPattern": "((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"
+    },
+    "directoryId": {
+      "description": "(Required) The ID of the AWS Directory Service directory.",
+      "type": "String"
+    },
+    "directoryName": {
+      "description": "(Required) The name of the directory; for example, test.example.com",
+      "type": "String"
+    }
+  }
+}
