@@ -10,9 +10,13 @@
 
 [Instance Scheduler for EC2 & RDS instances](https://github.com/jahCloud/AWS-Labs/wiki/Instance-Scheduler-for-EC2-&-RDS-instances)
 
+[KMS in CLI command](https://github.com/jahCloud/AWS-Labs/wiki/KMS-Commands)
+
 [Lambda in Python with RDS and pyodbc](https://github.com/jahCloud/AWS-Labs/wiki/Lambda-in-Python-with-RDS-and-pyodbc)
 
 [RDS Back up & Restore](https://github.com/jahCloud/AWS-Labs/wiki/RDS-Back-up-&-Restore)
+
+[RDS Monitoring](https://github.com/jahCloud/AWS-Labs/wiki/RDS-Monitoring)
 
 [Remote Desktop Gateway](https://github.com/jahCloud/AWS-Labs/wiki/Remote-Desktop-Gateway)
 
